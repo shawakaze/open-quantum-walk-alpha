@@ -109,14 +109,7 @@ def draw():
     plot2, = pl.plot(x,z,'b')
     pl.legend([plot2],['fidelity between the two solns'],'upper left')
     pl.savefig("Apf1.png")
-
-    pl.show()
-
-
-
-
-#draw()
-print main(0.5)
-
-#print main(0.98),"\n\nWith theta as",theta
+##########################################################################################
+draw()
+print "\n\nWith theta as",theta
                   
