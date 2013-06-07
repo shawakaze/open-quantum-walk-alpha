@@ -23,8 +23,7 @@ def thetafn(A):
     b1 = max(B.eigenenergies())
     return -2*sp.arccos(dec(b0,b1))
 ################################################
-def DM(A,b): 
-    b = b/norm(b)
+def DM(A,b):
     des = solve(A,b)
     des = Qobj(des)
     des = des.unit()
