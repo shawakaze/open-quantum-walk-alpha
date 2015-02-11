@@ -2,7 +2,7 @@
 import numpy as np
 from qutip import *
 import pylab as pl
-from time import time
+import time
 ########### my modules #######################################
 from HilbertSpace import *
 from Operators import *
@@ -15,6 +15,13 @@ rc('text', usetex=True)
 rc('font', family='serif')
 ##############################################################
 
+"""
+	timing the experiment
+"""
+start_time = time.time()
+
+
+#############################################################
 i = csr(-1)
 K = Kspace(9)
 P9 = Projection(9,8)
@@ -111,5 +118,11 @@ def draw():
     pl.savefig("Apf1.png")
 ##########################################################################################
 draw()
+
+end_time = time.time()
+
+total_time = start_time - end_time
+
 print "\n\nWith theta as",theta
-                  
+
+print "The elapsed time is", total_time                

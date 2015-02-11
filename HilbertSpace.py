@@ -6,7 +6,7 @@ import numpy as np
 i = sqrt(-1)
 
 def Hadamardgate():
-    return (1/sqrt(2))*Qobj(matrix([[1,1],[1,-1]]))
+    return (1/sqrt(2))*Qobj(np.matrix([[1,1],[1,-1]]))
 """
     The next gate is not unitary
 """
