@@ -1,28 +1,15 @@
 #from __future__ import print_function
-from solver import *
-from scipy import matrix
-from qutip import * 
-from HilbertSpace import *
-from Kspace import *
-from Operators import *
-from Detector import *
-from cmath import *
-from numpy import *
-import pylab as pl
-from scipy.linalg import *
-from time import time
-from scipy import log
-from numpy import arange
+import numpy, pylab as pl
 
 def plot1():
     x,y,z=[],[],[]
-    for i in arange(1,3,0.01):
+    numz = numpy.linspace(1,3)
+    for i in numz:
         x.append(i)
-        y.append(log(i))
+        y.append(numpy.log(i))
         z.append(i**3)
-
-    plot1 = pl.plot(x,y,'r')
-    plot2 = pl.plot(x,z,'b')
+    plotxy = pl.plot(x,y,'r')
+    plotxz = pl.plot(x,z,'b')
     pl.show()
 
 plot1()
